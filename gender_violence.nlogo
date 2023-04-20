@@ -56,6 +56,10 @@ to go
     user-message "Todas las mujeres son víctimas. La simulación se detendrá."
     stop
   ]
+  if ticks >= 500 [
+    user-message "Se han alcanzado 500 ticks. La simulación se detendrá."
+    stop
+  ]
 
   ask women [
     move-to one-of neighbors4
@@ -181,10 +185,10 @@ NIL
 1
 
 SLIDER
-10
-165
-238
-198
+12
+189
+240
+222
 risk-factor-threshold-men-slider
 risk-factor-threshold-men-slider
 0
@@ -196,10 +200,10 @@ NIL
 HORIZONTAL
 
 SLIDER
-10
-77
-210
-110
+12
+96
+212
+129
 num-women
 num-women
 0
@@ -211,10 +215,10 @@ NIL
 HORIZONTAL
 
 SLIDER
-10
-113
-210
-146
+12
+132
+212
+165
 num-men
 num-men
 0
@@ -245,10 +249,10 @@ PENS
 "Víctimas" 1.0 0 -2674135 true "" "plot count women with [victim = true]"
 
 SLIDER
-10
-200
-238
-233
+12
+224
+240
+257
 risk-factor-threshold-women-slider
 risk-factor-threshold-women-slider
 0
@@ -260,10 +264,10 @@ NIL
 HORIZONTAL
 
 SLIDER
-10
-235
-238
-268
+12
+259
+240
+292
 recovery-probability-slider
 recovery-probability-slider
 0
@@ -275,15 +279,15 @@ NIL
 HORIZONTAL
 
 SLIDER
-10
-270
-239
-303
+12
+294
+241
+327
 policy-value-slider
 policy-value-slider
 0
 1
-0.0
+0.7
 0.1
 1
 NIL
